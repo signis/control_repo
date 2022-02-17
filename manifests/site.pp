@@ -4,4 +4,8 @@ node default {
     content => 'This is a readme',
     owner   => 'root',
   }
+  user { 'foo':
+    ensure   => present,
+    password => Sensitive("my secret password")
+  }
 }
